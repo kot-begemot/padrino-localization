@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
     "VERSION",
     "lib/padrino-localization.rb",
     "lib/padrino-localization/middleware.rb",
+    "padrino-localization.gemspec",
     "test/middleware_test.rb",
     "test/padrino-localization_test.rb",
     "test/test_app/.components",
