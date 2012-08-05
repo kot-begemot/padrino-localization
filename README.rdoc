@@ -1,6 +1,41 @@
 = padrino-localization
 
-Description goes here.
+The gem that allows to localize your application.
+
+== Usage
+
+* First install the gem
+
+  With Bundle
+
+    #Gemfile
+    gem "padrino-localization"
+
+    #irb
+    bundle install
+
+  or with gem
+
+    gem install padrino-localization
+
+* Next, register it in your application
+
+    class UfoSeti < Padrino::Application
+      ...
+      register Padrion::Localization
+      ...
+    end
+
+* And that's it. Now I18n.locale will be dependent on the url. You can also predefine the default locale like that: I18n.default_locale = "de"
+
+_NB! Currently your '/' handler should start with `halt_page_if_locale_not_matching`. Hopefully that will be fixed soon._
+
+    YourApp.controller do
+      get :index do
+        halt_page_if_locale_not_matching
+        t "main.welcome"
+      end
+    end
 
 == Contributing to padrino-localization
  

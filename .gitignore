@@ -46,3 +46,7 @@ pkg
 
 # For rubinius:
 #*.rbc
+
+#IDE
+.idea/
+nbproject/
