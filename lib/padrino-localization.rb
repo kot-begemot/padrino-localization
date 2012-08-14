@@ -27,7 +27,7 @@ module Padrino
       #   url_for_with_locale(:posts, :new, :locale => 'se') # /se/posts/new
       #
       def url_with_locale *args
-        locale_scope = (::I18n.locale == ::I18n.default_locale) ? {} : {locale: ::I18n.locale}
+        locale_scope = (::I18n.locale == ::I18n.default_locale) ? {} : {:locale => ::I18n.locale}
         if args.last.kind_of? Hash
           # should not overwrite provided locale
           args.last.merge!(locale_scope)
