@@ -1,6 +1,7 @@
 source "http://rubygems.org"
 
 gem "padrino"
+  gem "i18n"
 
 group :development, :test do
   gem "test-spec"
@@ -14,6 +15,5 @@ group :development, :test do
   gem 'ruby-debug', :platform => :ruby_18
   gem "rcov", "~> 1.0.0", :platform => :ruby_18
 
-  gem "i18n"
   gem "capybara"
 end

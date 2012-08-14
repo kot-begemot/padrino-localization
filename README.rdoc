@@ -1,4 +1,5 @@
 = padrino-localization
+{<img src="https://secure.travis-ci.org/kot-begemot/padrino-localization.png" />}[http://travis-ci.org/kot-begemot/padrino-localization]
 
 The gem that allows to localize your application.
 
