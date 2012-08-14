@@ -33,7 +33,8 @@ module Padrino
           args.last.merge!(locale_scope)
           url_without_locale *args
         else
-          url_without_locale *args, locale_scope
+          args << locale_scope
+          url_without_locale *args
         end.gsub('//','/')
       end
 

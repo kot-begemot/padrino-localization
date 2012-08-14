@@ -1,7 +1,7 @@
 require 'rubygems'
+require 'test/unit'
 require 'capybara'
 require 'capybara/dsl'
-require 'test/unit'
 if RUBY_VERSION >= '1.9.0'
   require "debugger"
 else
