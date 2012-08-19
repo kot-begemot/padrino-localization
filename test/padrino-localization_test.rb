@@ -54,4 +54,26 @@ class MainControllerTest < Test::Unit::TestCase
     visit "/en/test"
     assert_equal 404, page.status_code
   end
+
+  def test_user_controller_index
+    visit "/en/user"
+    assert page.has_content?("translation missing: en.user.index"), "Page body was: #{page.body}"
+
+    visit "/user"
+    assert page.has_content?("translation missing: en.user.index"), "Page body was: #{page.body}"
+
+    visit "/ru/user"
+    assert page.has_content? "translation missing: ru.user.index"
+  end
+
+  def test_user_show_with_params
+    visit "/en/user/show/10"
+    assert page.has_content? "ID is 10"
+
+    visit "/ru/user/show/10"
+    assert page.has_content?("ID is 10"), "Page body was: #{page.body}"
+
+    visit "/user/show/10"
+    assert page.has_content? "ID is 10"
+  end
 end
