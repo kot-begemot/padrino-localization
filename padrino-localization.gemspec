@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "padrino-localization"
-  s.version = "0.1.2"
+  s.version = "0.1.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["kot-begemot"]
-  s.date = "2012-08-19"
+  s.date = "2012-08-20"
   s.description = "This gem allows you to localalize your padrino application with ease"
   s.email = "max@studentify.nl"
   s.extra_rdoc_files = [
