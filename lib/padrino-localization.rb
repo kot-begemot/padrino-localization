@@ -11,6 +11,7 @@ module Padrino
         app.instance_eval do
           alias :url_without_locale :url
           alias :url :url_with_locale
+          alias :url_for :url_with_locale
         end
       end
 
