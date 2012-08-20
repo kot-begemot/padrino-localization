@@ -3,6 +3,12 @@ module Padrino
     class Middleware
       attr_reader :languages
       alias_method :langs, :languages
+      
+      class << self
+        def languages
+          @languages
+        end
+      end
 
       def initialize(app, langs)
         @app = app
@@ -24,6 +30,8 @@ module Padrino
           raise ArgumentError.new("An arguments should be 2 latters long") unless l.to_s =~ /\A[a-z]{2}\Z/i
           l.to_s
         end
+        self.class.instance_variable_set :@languages, @languages
+        @languages
       end
       alias_method :langs=, :languages=
 

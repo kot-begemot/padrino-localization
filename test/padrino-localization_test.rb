@@ -66,14 +66,23 @@ class MainControllerTest < Test::Unit::TestCase
     assert page.has_content? "translation missing: ru.user.index"
   end
 
-  def test_user_show_with_params
-    visit "/en/user/show/10"
-    assert page.has_content? "ID is 10"
+  def test_url_test_no_locale
+    assert_equal '/', TestApp.url(:index)
+  end
 
-    visit "/ru/user/show/10"
-    assert page.has_content?("ID is 10"), "Page body was: #{page.body}"
+  def test_url_test_with_locale
+    assert_equal '/ru/', TestApp.url_with_locale(:index, :locale => "ru")
+    assert_equal '/ru/', TestApp.url(:index, :locale => "ru")
+    ::I18n.locale = :ru
+    assert_equal '/ru/', TestApp.url(:index)
+    assert_equal '/', TestApp.url(:index, :locale => "en")
+    ::I18n.locale = ::I18n.default_locale
+  end
 
-    visit "/user/show/10"
-    assert page.has_content? "ID is 10"
+  def test_url_is_not_registered
+    assert_equal '/', TestApp.url_with_locale(:index, :locale => "sdv")
+    ::I18n.locale = :ru
+    assert_equal '/ru/', TestApp.url(:index, :locale => "sdfsa")
+    ::I18n.locale = ::I18n.default_locale
   end
 end
