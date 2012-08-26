@@ -1,7 +1,8 @@
 source "http://rubygems.org"
 
 gem "padrino"
-  gem "i18n"
+gem "localization-middleware"
+gem "i18n"
 
 group :development, :test do
   gem "test-spec"
