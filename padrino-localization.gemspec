@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "padrino-localization"
-  s.version = "0.1.3"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["kot-begemot"]
-  s.date = "2012-08-20"
+  s.date = "2012-08-26"
   s.description = "This gem allows you to localalize your padrino application with ease"
   s.email = "max@studentify.nl"
   s.extra_rdoc_files = [
@@ -53,6 +53,7 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<padrino>, [">= 0"])
+      s.add_runtime_dependency(%q<localization-middleware>, [">= 0"])
       s.add_runtime_dependency(%q<i18n>, [">= 0"])
       s.add_development_dependency(%q<test-spec>, [">= 0"])
       s.add_development_dependency(%q<yard>, ["~> 0.6.0"])
@@ -65,6 +66,7 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<capybara>, [">= 0"])
     else
       s.add_dependency(%q<padrino>, [">= 0"])
+      s.add_dependency(%q<localization-middleware>, [">= 0"])
       s.add_dependency(%q<i18n>, [">= 0"])
       s.add_dependency(%q<test-spec>, [">= 0"])
       s.add_dependency(%q<yard>, ["~> 0.6.0"])
@@ -78,6 +80,7 @@ Gem::Specification.new do |s|
     end
   else
     s.add_dependency(%q<padrino>, [">= 0"])
+    s.add_dependency(%q<localization-middleware>, [">= 0"])
     s.add_dependency(%q<i18n>, [">= 0"])
     s.add_dependency(%q<test-spec>, [">= 0"])
     s.add_dependency(%q<yard>, ["~> 0.6.0"])
