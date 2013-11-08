@@ -30,7 +30,7 @@ The gem that allows to localize your application.
 
     class UfoSeti < Padrino::Application
       ...
-      register Padrion::Localization::Urls
+      register Padrino::Localization::Urls
       ...
     end
 
