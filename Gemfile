@@ -6,7 +6,7 @@ gem "i18n"
 
 group :development, :test do
   gem "test-spec"
-  gem "yard", "~> 0.6.0"
+  gem "yard", "~> 0.9.20"
   gem "bundler", "~> 1.0.0"
   gem "jeweler", "~> 1.6.4"
   
