@@ -73,7 +73,7 @@ GEM
       mail (~> 2.3.0)
       padrino-core (= 0.10.7)
     polyglot (0.3.3)
-    rack (1.4.1)
+    rack (1.6.12)
     rack-protection (1.2.0)
       rack
     rack-test (0.6.1)
