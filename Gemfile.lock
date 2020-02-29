@@ -78,7 +78,7 @@ GEM
       rack
     rack-test (0.6.1)
       rack (>= 1.0)
-    rake (0.9.2.2)
+    rake (13.0.1)
     rbx-require-relative (0.0.9)
     rcov (1.0.0)
     ruby-debug (0.10.4)
